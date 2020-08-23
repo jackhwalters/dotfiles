@@ -4,9 +4,23 @@ set runtimepath+=~/.vim_runtime
 set hlsearch
 hi Search ctermbg=LightYellow
 hi Search ctermfg=Red
+hi Visual  guifg=White guibg=LightBlue gui=none
 
 " paste
 set noautoindent
+
+"DIY autoclosing
+inoremap (; ();<left><left>
+inoremap [; [];<left><left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap {<cr> {<cr>}<esc>O
+inoremap (<cr> (<cr>)<esc>O
+inoremap [<cr> [<cr>]<esc>O
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ` ``<left>
+inoremap ``` ```<cr>```<esc>O
 
 " pathogen
 execute pathogen#infect()
@@ -50,10 +64,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"try
-"source ~/.vim_runtime/my_configs.vim
-"catch
-"endtry
 
 " Remappings
 :imap jh  <Esc>
