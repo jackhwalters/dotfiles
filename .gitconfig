@@ -1,0 +1,5 @@
+[user]
+	name = jack
+	email = jackwalterswork@gmail.com
+[core]
+	editor = /usr/local/bin/mvim -v
