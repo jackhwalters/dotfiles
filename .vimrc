@@ -1,10 +1,14 @@
 set runtimepath+=~/.vim_runtime
 
+syntax on
+set ignorecase
+
 " colours
+colorscheme desert
 set hlsearch
-hi Search ctermbg=LightYellow
-hi Search ctermfg=Red
-hi Visual  guifg=White guibg=LightBlue gui=none
+hi Search ctermbg=White
+hi Search ctermfg=DarkBlue
+hi Visual  guifg=White guibg=DarkBlue gui=none
 
 " paste
 set noautoindent
@@ -24,7 +28,6 @@ inoremap ``` ```<cr>```<esc>O
 
 " pathogen
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
 
 " vundle
@@ -66,12 +69,14 @@ let g:syntastic_check_on_wq = 0
 
 
 " Remappings
-:imap jh  <Esc>
-:cmap wp  w !python3  
-:cmap tr below term
-
-cnoreabbrev vhelp vert h
-cnoreabbrev hhelp help
-cnoreabbrev NT NERDTree
+:imap JH <esc>
+:imap jh <Esc>
+:cmap WP w !python3  
+:cmap TR below term
+:cmap vhelp vert h
+:cmap hhelp help
+:cmap NT NERDTree
+:nnoremap <Tab> :tabn <ENTER>
+:nmap <leader><Tab> :tabp <ENTER>
 
 set number
