@@ -13,7 +13,7 @@ hi Visual  guifg=White guibg=DarkBlue gui=none
 " paste
 set noautoindent
 
-"DIY autoclosing
+" DIY autoclosing
 inoremap (; ();<left><left>
 inoremap [; [];<left><left>
 inoremap ( ()<left>
@@ -66,7 +66,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
 
 " Remappings
 :imap JH <esc>
