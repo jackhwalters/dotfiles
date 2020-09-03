@@ -49,11 +49,17 @@ filetype plugin indent on    " required
 let g:NERDTreeDirArrows=0
 let NERDTreeShowHidden=1
 let g:NERDTreeWinPos = "left"
+let NERDTreeRespectWildIgnore=1
+set wildignore+=*.swp,*.DS_Store,
 
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_highlighting=1
 let g:syntastic_enable_signs=1
 highlight SyntasticErrorLine guibg=#bf1313
@@ -67,7 +73,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Remappings
+" remappings
 :imap JH <esc>
 :imap jh <Esc>
 :cmap WP w !python3  
