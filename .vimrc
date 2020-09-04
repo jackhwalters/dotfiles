@@ -13,19 +13,6 @@ hi Visual  guifg=White guibg=DarkBlue gui=none
 " paste
 set noautoindent
 
-" DIY autoclosing
-inoremap (; ();<left><left>
-inoremap [; [];<left><left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap {<cr> {<cr>}<esc>O
-inoremap (<cr> (<cr>)<esc>O
-inoremap [<cr> [<cr>]<esc>O
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ` ``<left>
-inoremap ``` ```<cr>```<esc>O
-
 " pathogen
 execute pathogen#infect()
 filetype plugin indent on
