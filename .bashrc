@@ -47,11 +47,13 @@ alias cplpl="cd ~/Documents/Programming/C++"
 alias v="vim"
 alias mv="mv -i"
 alias e="exit"
-alias nosetests="nosetests -s > nosetests_print.txt 2>&1; less nosetests_print.txt; rm nosetests_print.txt"
+alias nosetestsprint="nosetests -s > nosetests_print.txt 2>&1; less nosetests_print.txt; rm nosetests_print.txt"
 alias flaskproduction="export FLASK_ENV=production"
 alias flaskdevelopment="export FLASK_ENV=development"
 alias .conf="mvim -v -p .bashrc .gitconfig .tmux.conf .vimrc" 
 alias vim="mvim -v"
+alias venv="source venv/bin/activate"
+alias gr="grep"
 
 # Source
 source /Users/jack/Library/Preferences/org.dystroy.broot/launcher/bash/br
