@@ -51,9 +51,10 @@ alias nosetestsprint="nosetests -s > nosetests_print.txt 2>&1; less nosetests_pr
 alias flaskproduction="export FLASK_ENV=production"
 alias flaskdevelopment="export FLASK_ENV=development"
 alias .conf="mvim -v -p ~/dotfiles/.bashrc ~/dotfiles/.gitconfig ~/dotfiles/.tmux.conf ~/dotfiles/.vimrc" 
-alias vim="mvim -v"
+#alias vim="mvim -v"
 alias venv="source venv/bin/activate"
 alias gr="grep"
+alias jn="jupyter notebook"
 
 # Source
 source /Users/jack/Library/Preferences/org.dystroy.broot/launcher/bash/br

@@ -16,19 +16,6 @@ set autoread                    "Reload files changed outside vim
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-" turn on syntax highlighting
-syntax on
-set ignorecase
-
-" colours
-set hlsearch
-hi Search ctermbg=White
-hi Search ctermfg=DarkBlue
-hi Visual  guifg=White guibg=DarkBlue gui=none
-syntax enable
-set background=dark
-colorscheme solarized
-
 " paste
 set noautoindent
 
@@ -39,28 +26,39 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'valloric/youcompleteme'
+Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/nerdtree'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'dbakker/vim-lint'
 Plugin 'mattn/vim-terminal'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'chrisbra/color_highlight.git'
+Plugin 'chrisbra/Colorizer'
 Plugin 'skwp/vim-colors-solarized'
 Plugin 'itchyny/lightline.vim'
-Plugin 'jby/tmux.vim.git'
-Plugin 'morhetz/gruvbox'
-Plugin 'xsunsmile/showmarks.git'
-Plugin 'chriskempson/base16-vim'
 
 " End plugins
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" MacVim
-set guifont=Menlo\ Regular:h12
+syntax enable
+set ignorecase
+
+" colours
+set hlsearch
+if has('gui_running')
+	set guifont=Menlo\ Regular:h13
+	let g:solarized_contrast = 'high'
+	set antialias
+	set background=dark
+	colorscheme solarized
+	hi Search ctermbg=White
+	hi Search ctermfg=Red
+	hi Visual guifg=White guibg=DarkBlue gui=none
+else
+	colorscheme srcery
+	hi Search ctermbg=White
+	hi Search ctermfg=Red
+	hi Visual guifg=White guibg=DarkBlue gui=none
+endif
 
 " NERDTree
 let g:NERDTreeDirArrows=0
@@ -96,4 +94,5 @@ set termwinsize=15x0
 :nnoremap <Tab> :tabn <ENTER>
 :nmap <leader><Tab> :tabp <ENTER>
 
+autocmd VimEnter *  NERDTree .
 set number
