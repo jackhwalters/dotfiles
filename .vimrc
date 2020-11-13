@@ -19,6 +19,9 @@ set hidden
 " paste
 set noautoindent
 
+" disable swap files
+set noswapfile
+
 " vundle
 filetype off
 "set the runtime path to include Vundle and initialize
@@ -93,6 +96,11 @@ set termwinsize=15x0
 :cmap NT NERDTree
 :nnoremap <Tab> :tabn <ENTER>
 :nmap <leader><Tab> :tabp <ENTER>
+
+autocmd Filetype javascript setlocal tabstop=2
+autocmd Filetype html setlocal tabstop=2
+set autoindent
+set smartindent
 
 autocmd VimEnter *  NERDTree .
 set number
