@@ -37,6 +37,7 @@ Plugin 'mattn/vim-terminal'
 Plugin 'chrisbra/Colorizer'
 Plugin 'skwp/vim-colors-solarized'
 Plugin 'itchyny/lightline.vim'
+Plugin 'preservim/nerdcommenter'
 
 " End plugins
 call vundle#end()            " required
@@ -48,19 +49,19 @@ set ignorecase
 " colours
 set hlsearch
 if has('gui_running')
-	set guifont=Menlo\ Regular:h13
-	let g:solarized_contrast = 'high'
-	set antialias
-	set background=dark
-	colorscheme solarized
-	hi Search ctermbg=White
-	hi Search ctermfg=Red
-	hi Visual guifg=White guibg=DarkBlue gui=none
+    set guifont=Menlo\ Regular:h13
+    let g:solarized_contrast = 'high'
+    set antialias
+    set background=dark
+    colorscheme solarized
+    hi Search ctermbg=White
+    hi Search ctermfg=Red
+    hi Visual guifg=White guibg=DarkBlue gui=none
 else
-	colorscheme srcery
-	hi Search ctermbg=White
-	hi Search ctermfg=Red
-	hi Visual guifg=White guibg=DarkBlue gui=none
+    colorscheme atom-dark
+    hi Search ctermbg=White
+    hi Search ctermfg=Red
+    hi Visual guifg=White guibg=DarkBlue gui=none
 endif
 
 " NERDTree
@@ -68,6 +69,7 @@ let g:NERDTreeDirArrows=0
 let NERDTreeShowHidden=1
 let g:NERDTreeWinPos = "left"
 let NERDTreeRespectWildIgnore=1
+let g:NERDTreeWinSize=25
 set wildignore+=*.swp,*.DS_Store,
 
 " syntastic
@@ -80,27 +82,32 @@ let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_enable_highlighting=0
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_typescript_checkers = ['tslint']
 
 " terminal
 set termwinsize=15x0
 
 " remappings
-:imap JH <esc>
-:imap jh <Esc>
-:cmap WP w !python3  
-:cmap TR below term
-:cmap vhelp vert h
-:cmap hhelp help
-:cmap NT NERDTree
-:nnoremap <Tab> :tabn <ENTER>
-:nmap <leader><Tab> :tabp <ENTER>
+imap JH <esc>
+imap jh <Esc>
+cmap WP w !python3  
+cmap TR below term
+cmap vhelp vert h
+cmap hhelp help
+cmap NT NERDTree
+nnoremap <Tab> :tabn <ENTER>
+nmap <leader><Tab> :tabp <ENTER>
 
+set number
+set smartindent
+set linebreak
+set tabstop=4
+set shiftwidth=4
 autocmd Filetype javascript setlocal tabstop=2
 autocmd Filetype html setlocal tabstop=2
-set autoindent
-set smartindent
+set expandtab
+set clipboard=unnamed
 
-autocmd VimEnter *  NERDTree .
-set number
+autocmd VimEnter * NERDTree .
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
