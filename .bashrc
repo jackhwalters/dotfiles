@@ -52,6 +52,7 @@ alias nosetestsprint="nosetests -s > nosetests_print.txt 2>&1; less nosetests_pr
 alias flaskproduction="export FLASK_ENV=production"
 alias flaskdevelopment="export FLASK_ENV=development"
 alias .conf="mvim -v -p ~/dotfiles/.bashrc ~/dotfiles/.gitconfig ~/dotfiles/.tmux.conf ~/dotfiles/.vimrc" 
+alias cheatsheet="vim /Users/jack/Documents/Programming/CommandLine/BashCheatSheet.rtf"
 #alias vim="mvim -v"
 alias venv="source venv/bin/activate"
 alias gr="grep"

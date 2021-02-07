@@ -58,7 +58,7 @@ if has('gui_running')
     hi Search ctermfg=Red
     hi Visual guifg=White guibg=DarkBlue gui=none
 else
-    colorscheme atom-dark
+    colorscheme xcodedarkhc
     hi Search ctermbg=White
     hi Search ctermfg=Red
     hi Visual guifg=White guibg=DarkBlue gui=none
@@ -109,5 +109,7 @@ autocmd Filetype html setlocal tabstop=2
 set expandtab
 set clipboard=unnamed
 
-autocmd VimEnter * NERDTree .
+if has('gui_running')
+    autocmd VimEnter * NERDTree .
+endif
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
