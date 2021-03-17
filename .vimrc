@@ -38,6 +38,7 @@ Plugin 'chrisbra/Colorizer'
 Plugin 'skwp/vim-colors-solarized'
 Plugin 'itchyny/lightline.vim'
 Plugin 'preservim/nerdcommenter'
+Plugin 'pseewald/vim-anyfold'
 
 " End plugins
 call vundle#end()            " required
@@ -84,6 +85,16 @@ let g:syntastic_enable_highlighting=0
 let g:syntastic_enable_signs=1
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_typescript_checkers = ['tslint']
+" see :h syntastic-loclist-callback
+function! SyntasticCheckHook(errors)
+    if !empty(a:errors)
+        let g:syntastic_loc_list_height = min([len(a:errors), 10])
+    endif
+endfunction
+
+" any-fold
+autocmd Filetype * AnyFoldActivate
+set foldlevel=99
 
 " terminal
 set termwinsize=15x0
@@ -105,7 +116,9 @@ set linebreak
 set tabstop=4
 set shiftwidth=4
 autocmd Filetype javascript setlocal tabstop=2
+autocmd Filetype javascript setlocal shiftwidth=2
 autocmd Filetype html setlocal tabstop=2
+autocmd Filetype html setlocal shiftwidth=2
 set expandtab
 set clipboard=unnamed
 
