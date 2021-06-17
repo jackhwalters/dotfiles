@@ -18,3 +18,5 @@ else
     mkdir ../.vim/autoload/
     cp -r autoload/ ../.vim/autoload/
 fi
+
+cp .vimrc ../.vimrc; cp .bashrc ../.bashrc; cp .gitconfig ../.gitconfig; cp .tmux.conf ../.tmux.conf
