@@ -29,13 +29,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'neoclide/coc.nvim'
 Plugin 'preservim/nerdtree'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'mattn/vim-terminal'
 Plugin 'chrisbra/Colorizer'
-Plugin 'skwp/vim-colors-solarized'
 Plugin 'itchyny/lightline.vim'
 Plugin 'preservim/nerdcommenter'
 Plugin 'pseewald/vim-anyfold'
@@ -51,15 +48,14 @@ set ignorecase
 set hlsearch
 if has('gui_running')
     set guifont=Menlo\ Regular:h13
-    let g:solarized_contrast = 'high'
     set antialias
     set background=dark
-    colorscheme solarized
+    colorscheme onedark
     hi Search ctermbg=White
     hi Search ctermfg=Red
     hi Visual guifg=White guibg=DarkBlue gui=none
 else
-    colorscheme xcodedarkhc
+    colorscheme onedark
     hi Search ctermbg=White
     hi Search ctermfg=Red
     hi Visual guifg=White guibg=DarkBlue gui=none
@@ -72,25 +68,6 @@ let g:NERDTreeWinPos = "left"
 let NERDTreeRespectWildIgnore=1
 let g:NERDTreeWinSize=25
 set wildignore+=*.swp,*.DS_Store,
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_enable_highlighting=0
-let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['jslint']
-let g:syntastic_typescript_checkers = ['tslint']
-" see :h syntastic-loclist-callback
-function! SyntasticCheckHook(errors)
-    if !empty(a:errors)
-        let g:syntastic_loc_list_height = min([len(a:errors), 10])
-    endif
-endfunction
 
 " any-fold
 autocmd Filetype * AnyFoldActivate
@@ -115,10 +92,10 @@ set smartindent
 set linebreak
 set tabstop=4
 set shiftwidth=4
-autocmd Filetype javascript setlocal tabstop=2
-autocmd Filetype javascript setlocal shiftwidth=2
-autocmd Filetype html setlocal tabstop=2
-autocmd Filetype html setlocal shiftwidth=2
+autocmd Filetype javascript setlocal tabstop=4
+autocmd Filetype javascript setlocal shiftwidth=4
+autocmd Filetype html setlocal tabstop=4
+autocmd Filetype html setlocal shiftwidth=4
 set expandtab
 set clipboard=unnamed
 

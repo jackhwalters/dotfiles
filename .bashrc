@@ -34,6 +34,8 @@ alias gl="git log --all --graph --decorate"
 alias gll="git log --all --graph --decorate --stat"
 alias glf="git log --follow -p"
 alias gdf="git diff --cached"
+alias gch="git checkout"
+alias gchm="git checkout master"
 alias ip="ifconfig | grep inet\ "
 alias chrome="Google\ Chrome.app"
 alias qm="cd ~/Documents/Academic/QueenMary"
@@ -44,7 +46,7 @@ alias dl4am="cd ~/Documents/Academic/QueenMary/Year2/DeepLearningForAudioAndMusi
 alias pr="cd ~/Documents/Programming"
 alias cl="cd ~/Documents/Programming/CommandLine"
 alias pyt="cd ~/Documents/Programming/Python"
-alias nem="cd ~/Documents/Work/Work\ Exp/Nemisindo"
+alias nem="cd ~/Documents/Work/Nemisindo"
 alias py="python3"
 alias cplpl="cd ~/Documents/Programming/C++"
 alias v="vim"
@@ -59,8 +61,12 @@ alias cheatsheet="vim /Users/jack/Documents/Programming/CommandLine/BashCheatShe
 alias venv="source venv/bin/activate"
 alias gr="grep"
 alias jn="jupyter notebook"
+alias mvnp="mvn package"
 
 # Source
 source /Users/jack/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PS1="\[\033[92m\]\u@\h \[\033[96m\]\W\[\033[31m\] (\$(git symbolic-ref --short HEAD 2>/dev/null))\[\033[00m\]\$ "
+
