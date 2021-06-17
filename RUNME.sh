@@ -23,7 +23,7 @@ if [ -d "../.vim/pack" ]
 then
     cp -r pack/ ../.vim/
 else
-    mkdir ../.vim/autoload/
+    mkdir ../.vim/pack/
     cp -r pack/ ../.vim/
 fi
 
