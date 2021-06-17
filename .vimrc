@@ -31,7 +31,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'preservim/nerdtree'
-Plugin 'mattn/vim-terminal'
 Plugin 'chrisbra/Colorizer'
 Plugin 'itchyny/lightline.vim'
 Plugin 'preservim/nerdcommenter'
@@ -72,9 +71,6 @@ set wildignore+=*.swp,*.DS_Store,
 " any-fold
 autocmd Filetype * AnyFoldActivate
 set foldlevel=99
-
-" terminal
-set termwinsize=15x0
 
 " remappings
 imap JH <esc>
