@@ -76,7 +76,6 @@ set foldlevel=99
 imap JH <esc>
 imap jh <Esc>
 cmap WP w !python3  
-cmap TR below term
 cmap vhelp vert h
 cmap hhelp help
 cmap NT NERDTree
