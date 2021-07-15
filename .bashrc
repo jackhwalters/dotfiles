@@ -63,9 +63,10 @@ alias venv="source venv/bin/activate"
 alias gr="grep"
 alias jn="jupyter notebook"
 alias mvnp="mvn package"
+alias sshenv="cd /import/scratch-01/jhw31 && venv && module load python/3.8.2 && module load cuda/9.0-cudnn7.0.5 && cd Speech-Enhancement/"
 
 # Source
-source /Users/jack/Library/Preferences/org.dystroy.broot/launcher/bash/br
+#source /Users/jack/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 

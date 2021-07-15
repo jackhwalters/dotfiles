@@ -2,7 +2,7 @@
 	name = Jack Walters
 	email = jackwalterswork@gmail.com
 [core]
-	editor = /usr/local/bin/mvim -v
+	editor = /usr/local/bin/vim
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
