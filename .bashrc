@@ -44,6 +44,7 @@ alias y2="cd ~/Documents/Academic/QueenMary/Year2"
 alias dist="cd ~/Documents/Academic/QueenMary/Year2/DistributedSystems"
 alias dl4am="cd ~/Documents/Academic/QueenMary/Year2/DeepLearningForAudioAndMusic"
 alias pro="cd ~/Documents/Academic/QueenMary/Year2/Project"
+alias hdp="cd /Volumes/HD/Project"
 alias pr="cd ~/Documents/Programming"
 alias cl="cd ~/Documents/Programming/CommandLine"
 alias pyt="cd ~/Documents/Programming/Python"
@@ -72,3 +73,5 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export PS1="\[\033[92m\]\u@\h \[\033[96m\]\W\[\033[31m\] (\$(git symbolic-ref --short HEAD 2>/dev/null))\[\033[00m\]\$ "
 
+# python
+export PYTHONBREAKPOINT=ipdb.set_trace

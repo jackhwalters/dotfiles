@@ -30,6 +30,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'neoclide/coc.nvim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/nerdtree'
 Plugin 'chrisbra/Colorizer'
 Plugin 'itchyny/lightline.vim'
@@ -94,7 +95,5 @@ autocmd Filetype html setlocal shiftwidth=4
 set expandtab
 set clipboard=unnamed
 
-if has('gui_running')
-    autocmd VimEnter * NERDTree .
-endif
+autocmd VimEnter * NERDTree .
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
