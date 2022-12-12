@@ -19,6 +19,10 @@ set hidden
 " paste
 set noautoindent
 
+" turn relative line numbers on
+:set relativenumber
+:set rnu
+
 " disable swap files
 set noswapfile
 
@@ -82,6 +86,8 @@ cmap hhelp help
 cmap NT NERDTree
 nnoremap <Tab> :tabn <ENTER>
 nmap <leader><Tab> :tabp <ENTER>
+nnoremap d "_d"
+vnoremap d "_d"
 
 set number
 set smartindent
@@ -95,5 +101,5 @@ autocmd Filetype html setlocal shiftwidth=4
 set expandtab
 set clipboard=unnamed
 
-autocmd VimEnter * NERDTree .
+autocmd VimEnter * .
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

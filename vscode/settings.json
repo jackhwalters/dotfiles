@@ -1,0 +1,26 @@
+{
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "vim.vimrc.enable": true,
+    "git.autofetch": true,
+    "editor.fontSize": 11,
+    "editor.fontFamily": "Menlo",
+    "editor.minimap.enabled": false,
+    "git.ignoreLegacyWarning": true,
+    "workbench.startupEditor": "none",
+    "editor.formatOnPaste": true,
+    "workbench.editor.enablePreview": false,
+    "editor.occurrencesHighlight": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.detectIndentation": false,
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "diffEditor.renderSideBySide": false,
+    "editor.colorDecorators": false,
+    "editor.lineNumbers": "relative",
+    "window.zoomLevel": 1
+}

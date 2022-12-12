@@ -6,8 +6,8 @@ export CLICOLOR=1
 #export LSCOLORS=exfxcxdxbxegedabagacad    # Default
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-if [ -f ~/.aliases  ]; then
-        . ~/.aliases
+if [ -f ~/dotfiles/.aliases  ]; then
+        . ~/dotfiles/.aliases
 fi
 
 # Source
