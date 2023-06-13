@@ -22,5 +22,8 @@
     "diffEditor.renderSideBySide": false,
     "editor.colorDecorators": false,
     "editor.lineNumbers": "relative",
+    "[python]": {
+        "editor.formatOnType": true
+    },
     "window.zoomLevel": 1
 }

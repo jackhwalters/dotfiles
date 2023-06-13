@@ -86,8 +86,8 @@ cmap hhelp help
 cmap NT NERDTree
 nnoremap <Tab> :tabn <ENTER>
 nmap <leader><Tab> :tabp <ENTER>
-nnoremap d "_d"
-vnoremap d "_d"
+nnoremap d "_dd"
+vnoremap d "_dd"
 
 set number
 set smartindent
