@@ -5,33 +5,24 @@ fi
 
 if [ -d "../.vim/colors"  ]
 then
-    cp -r colors/ ../.vim/
+    cp onedark.vim ../.vim/colors/onedark.vim
 else
-    mkdir ../.vim/colors
-    cp -r colors/ ../.vim/
+    mkdir ../.vim/colors/
+    cp onedark.vim ../.vim/colors/onedark.vim
 fi
 
 if [ -d "../.vim/autoload"  ]
 then
-    cp -r autoload/ ../.vim/
+    cp onedark.vim ../.vim/autoload/onedark.vim
 else
     mkdir ../.vim/autoload/
-    cp -r autoload/ ../.vim/
-fi
-
-if [ -d "../.vim/pack"  ]
-then
-    cp -r pack/ ../.vim/
-else
-    mkdir ../.vim/pack/
-    cp -r pack/ ../.vim/
+    cp onedark.vim ../.vim/autoload/onedark.vim
 fi
 
 cp .vimrc ../.vimrc
 cp .bashrc ../.bashrc
 cp .gitconfig ../.gitconfig
 cp .tmux.conf ../.tmux.conf
-cp coc-settings.json ../.vim/coc-settings.json
 cp .zshrc ../.zshrc
 cp .aliases ../.aliases
 
