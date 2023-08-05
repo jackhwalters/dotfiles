@@ -25,5 +25,6 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "diffEditor.ignoreTrimWhitespace": false
 }
