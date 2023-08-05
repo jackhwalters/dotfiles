@@ -6,22 +6,6 @@ then
     git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
 
-if [ -d "../.vim/colors"  ]
-then
-    ln -s $HOME/dotfiles/onedark.vim $HOME/.vim/colors/onedark.vim
-else
-    mkdir ../.vim/colors/
-    ln -s $HOME/dotfiles/onedark.vim $HOME/.vim/colors/onedark.vim
-fi
-
-if [ -d "../.vim/autoload"  ]
-then
-    ln -s $HOME/dotfiles/onedark.vim $HOME/.vim/autoload/onedark.vim
-else
-    mkdir ../.vim/autoload/
-    ln -s $HOME/dotfiles/onedark.vim $HOME/.vim/autoload/onedark.vim
-fi
-
 # Symlink RCs
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc

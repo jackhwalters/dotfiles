@@ -33,6 +33,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'joshdick/onedark.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/nerdtree'
 Plugin 'chrisbra/Colorizer'
@@ -48,21 +49,7 @@ syntax enable
 set ignorecase
 
 " colours
-set hlsearch
-if has('gui_running')
-    set guifont=Menlo\ Regular:h13
-    set antialias
-    set background=dark
-    colorscheme onedark
-    hi Search ctermbg=White
-    hi Search ctermfg=Red
-    hi Visual guifg=White guibg=DarkBlue gui=none
-else
-    colorscheme onedark
-    hi Search ctermbg=White
-    hi Search ctermfg=Red
-    hi Visual guifg=White guibg=DarkBlue gui=none
-endif
+colorscheme onedark
 
 " NERDTree
 let g:NERDTreeDirArrows=0
