@@ -7,7 +7,7 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 if [ -f ~/dotfiles/.aliases  ]; then
-        . ~/dotfiles/.aliases
+    . ~/dotfiles/.aliases
 fi
 
 # Source
