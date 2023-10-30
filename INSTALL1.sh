@@ -1,12 +1,13 @@
 #! /usr/bin/bash
 
+# Install zsh
+sudo apt install zsh
+
 # Symlink RCs
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
 ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
-ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
-ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
 ln -s $HOME/dotfiles/.aliases $HOME/.aliases
 
 # Install Vundle and install plugins
@@ -33,16 +34,4 @@ else
     exit 1
 fi
 
-if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]
-then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-fi
-
-if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]
-then
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-fi
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-exit 0
