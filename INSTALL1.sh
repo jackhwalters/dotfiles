@@ -44,7 +44,7 @@ then
     ln -s $HOME/dotfiles/settings.json $HOME/AppData/Roaming/Code/User/settings.json
     ln -s $HOME/dotfiles/keybindings.json $HOME/AppData/Roaming/Code/User/keybindings.json
 else
-    echo "This script is only configured for Mac and Linux"
+    echo "Unrecognised OS for installing VS Code configs"
 fi
 
 rm -rf $HOME/.oh-my-zsh/
