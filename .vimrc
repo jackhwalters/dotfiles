@@ -74,6 +74,7 @@ nnoremap <Tab> :tabn <ENTER>
 nmap <leader><Tab> :tabp <ENTER>
 nnoremap d "_dd"
 vnoremap d "_dd"
+nnoremap <C-e> <C-w>
 
 set number
 set smartindent

@@ -1,8 +1,9 @@
 [user]
-	name = Jack Walters
-	email = jackwalterswork@gmail.com
+    name = Jack Walters
+    email = jackwalterswork@gmail.com
 [core]
-	editor = /usr/local/bin/vim
+	editor = /usr/bin/vim
+	autocrlf = false
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
