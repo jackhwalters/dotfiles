@@ -11,13 +11,14 @@ else
     echo "Unrecognised OS for installing ZSH"
 fi
 
-
 # Symlink RCs
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
 ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.aliases $HOME/.aliases
+mkdir -p $HOME/.config/nvim/
+ln -sFf $HOME/dotfiles/nvim/ $HOME/.config
 
 # Install Vundle and install plugins
 if [ ! -d "../.vim/bundle/Vundle.vim" ]
@@ -44,7 +45,7 @@ then
     ln -s $HOME/dotfiles/settings.json $HOME/AppData/Roaming/Code/User/settings.json
     ln -s $HOME/dotfiles/keybindings.json $HOME/AppData/Roaming/Code/User/keybindings.json
 else
-    echo "Unrecognised OS for installing VS Code configs"
+    echo "This script is only configured for Mac and Linux"
 fi
 
 rm -rf $HOME/.oh-my-zsh/
