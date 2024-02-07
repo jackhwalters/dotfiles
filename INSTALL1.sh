@@ -36,6 +36,7 @@ then
     ln -s $HOME/dotfiles/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
+    sudo apt install ripgrep
     mkdir -p $HOME/.config/Code/User/
     ln -s $HOME/dotfiles/settings.json $HOME/.config/Code/User/settings.json
     ln -s $HOME/dotfiles/keybindings.json $HOME/.config/Code/User/keybindings.json
