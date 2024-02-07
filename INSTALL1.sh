@@ -27,6 +27,13 @@ then
 fi
 vim +PluginInstall +qall
 
+# Install Packer
+if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/" ]
+then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+         $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
+
 # Symlink VS Code configs
 if [[ $(uname -s) == 'Darwin'* ]]
 then
