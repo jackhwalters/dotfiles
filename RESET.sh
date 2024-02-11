@@ -3,11 +3,15 @@
 # Remove RCs
 rm $HOME/.vimrc
 rm $HOME/.bashrc
+rm -rf $HOME/.bash_profile*
 rm $HOME/.gitconfig
 rm $HOME/.tmux.conf
 rm $HOME/.aliases
 rm $HOME/.config/nvim
 rm $HOME/.zshrc
+rm $HOME/.zshrc.pre-oh-my-zsh*
+rm $HOME/.zshrc.pre-oh-my-zsh
+rm $HOME/.zshenv
 rm $HOME/.p10k
 
 # Remove Vundle
@@ -25,6 +29,7 @@ fi
 
 # Remove Packer
 rm -rf $HOME/.local/share/nvim/site/pack/packer
+rm $HOME/dotfiles/nvim/plugin/packer_compiled.lua
 
 # Remove TPM
 rm -rf $HOME/.tmux/plugins/tpm
@@ -44,11 +49,5 @@ then
     rm $HOME/AppData/Roaming/Code/User/keybindings.json
 fi
 
-# Remove PowerLevel10k
-rm -rf ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-# Remove ZSH Syntax Highlighting
-rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 # Remove Oh My ZSH
-rm -rf $HOME/.oh-my-zsh
+rm -rf .oh-my-zsh/

@@ -7,7 +7,6 @@ ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.aliases $HOME/.aliases
 ln -sFf $HOME/dotfiles/nvim/ $HOME/.config
-ln -s -f $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
 
 # Install Vundle and install plugins
@@ -39,9 +38,6 @@ if [ ! -d "$HOME/.tmux/plugins/tpm" ]
 then
     git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 fi
-tmux source-file $HOME/.tmux.conf
-$HOME/.tmux/plugins/tpm/bin/install_plugins
-
 
 # Symlink VS Code configs
 if [[ $(uname -s) == 'Darwin'* ]]
@@ -82,4 +78,8 @@ then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 
+ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
+
 export PATH="/opt/nvim-linux64/bin/nvim"
+
+source $HOME/.zshrc

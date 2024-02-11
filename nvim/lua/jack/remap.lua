@@ -1,5 +1,9 @@
 vim.g.mapleader = " "
 
+vim.opt.hlsearch = true
+vim.opt.ignorecase = true
+vim.keymap.set("n", "<leader>/", "<cmd>noh<CR>")
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("i", "jh", "<esc>")
 

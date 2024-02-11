@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
 
     use('airblade/vim-gitgutter')
 
+    use('ThePrimeagen/vim-be-good')
+
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
