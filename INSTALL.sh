@@ -19,11 +19,11 @@ vim +PluginInstall +qall
 # Install CLI dependencies
 if [[ $(uname -s) == 'Darwin'* ]]
 then
-    brew install tmux ripgrep curl
+    brew install tmux ripgrep curl jq
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     sudo apt-get install tmux
-    sudo apt install ripgrep curl
+    sudo apt install ripgrep curl jq
 fi
 
 # Install Packer

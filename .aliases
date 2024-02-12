@@ -11,7 +11,7 @@ alias ~="cd ~"
 alias -- -="cd -"
 alias p="pwd"
 
-alias d="cd ~/Documents"
+alias d="cd ~/dotfiles"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias g="git"

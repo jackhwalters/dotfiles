@@ -21,7 +21,16 @@ require("nvim-tree").setup({
 	},
 	filters = {
 		dotfiles = false,
+        custom = {
+            "^.git$",
+            "^__pycache__$",
+            "^.pytest_cache$"
+        }
 	},
+    git = {
+        enable = true,
+        ignore = false
+    }
 })
 
 -- Map Tree commands

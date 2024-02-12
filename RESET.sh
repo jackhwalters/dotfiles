@@ -20,11 +20,11 @@ rm -rf $HOME/.vim/bundle/vundle.vim
 # Remove CLI dependencies
 if [[ $(uname -s) == 'Darwin'* ]]
 then
-    brew uninstall tmux ripgrep curl
+    brew uninstall tmux ripgrep curl jq
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     yes | sudo apt-get remove tmux
-    yes | sudo apt remove ripgrep curl
+    yes | sudo apt remove ripgrep curl jq
 fi
 
 # Remove Packer

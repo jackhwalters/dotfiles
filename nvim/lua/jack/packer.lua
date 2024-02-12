@@ -18,12 +18,16 @@ return require('packer').startup(function(use)
 
     use('airblade/vim-gitgutter')
 
+    use('sindrets/diffview.nvim')
+
     use('ThePrimeagen/vim-be-good')
 
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    use('preservim/nerdcommenter')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
