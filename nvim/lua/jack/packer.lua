@@ -11,6 +11,13 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     use('nvim-treesitter/playground')
+    
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
 
     use('mbbill/undotree')
 
@@ -20,7 +27,9 @@ return require('packer').startup(function(use)
 
     use('sindrets/diffview.nvim')
 
-    use('ThePrimeagen/vim-be-good')
+    use('mfussenegger/nvim-dap')
+
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
     use {
         "windwp/nvim-autopairs",
@@ -42,10 +51,5 @@ return require('packer').startup(function(use)
         }
     }
 
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons',
-        },
-    }
+    use('ThePrimeagen/vim-be-good')
 end)
