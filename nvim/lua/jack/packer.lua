@@ -6,12 +6,12 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use { 'catppuccin/nvim', as = 'catppuccin' }
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     use('nvim-treesitter/playground')
-    
+
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -28,12 +28,39 @@ return require('packer').startup(function(use)
     use('sindrets/diffview.nvim')
 
     use('mfussenegger/nvim-dap')
-
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { 'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
+    use {
+        'theHamsta/nvim-dap-virtual-text',
+        requires = {'mfussenegger/nvim-dap'},
+        config = function()
+            local dap = require('dap')
+            local dapui = require('dapui')
+            dapui.setup()
+            dap.listeners.after.event_initialized['dapui_config'] = function()
+                dapui.open()
+            end
+            dap.listeners.before.event_terminated['dapui_config'] = function()
+                dapui.close()
+            end
+            dap.listeners.before.event_exited['dapui_config'] = function()
+                dapui.close()
+            end
+        end
+    }
 
     use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
+        'mfussenegger/nvim-dap-python',
+        requires = {'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui'},
+        config = function()
+            require('dap-python').setup(
+                '$HOME/.local/share/nvim/mason/packages/debugpy/venv/bin/python'
+            )
+        end
+    }
+
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require('nvim-autopairs').setup {} end
     }
 
     use('preservim/nerdcommenter')
@@ -48,6 +75,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
+            {'jose-elias-alvarez/null-ls.nvim'},
         }
     }
 

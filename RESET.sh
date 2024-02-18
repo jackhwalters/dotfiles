@@ -30,8 +30,9 @@ fi
 # Remove Packer
 rm -rf $HOME/.local/share/nvim/site/pack/packer
 rm $HOME/dotfiles/nvim/plugin/packer_compiled.lua
+conda remove pylint
 
-# Remove TPM
+# Remove TPM and related LSP dependencies
 rm -rf $HOME/.tmux/plugins/tpm
 
 # Remove VS Code configs

@@ -26,11 +26,12 @@ then
     sudo apt install ripgrep curl jq
 fi
 
-# Install Packer
+# Install Packer and related LSP dependencies
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]
 then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
          $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+    conda install pylint
 fi
 
 # Install TPM and tmux plugins
