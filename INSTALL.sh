@@ -61,6 +61,21 @@ else
     echo "Unrecognised OS for installing VS Code configs"
 fi
 
+# Install JetBrainsMono font
+if [[ $(uname -s) == 'Darwin'* ]]
+then
+    curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
+    unzip JetBrainsMono.zip -d JetBrainsMono
+    mkdir -p /Library/Fonts && cp -vf JetBrainsMono/*.ttf /Library/Fonts
+elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
+then
+    curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
+    tar -xvzf JetBrainsMono.tar.gz -C JetBrainsMono
+    mkdir -p $HOME/.local/share/fonts && cp -vf JetBrainsMono/*.ttf $HOME/.local/share/fonts
+else
+    echo "Unrecognised OS for installing VS Code configs"
+fi
+
 # Install Oh My Zsh
 if [[ $(uname -s) == 'Darwin'* || "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
