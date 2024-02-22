@@ -15,17 +15,8 @@ ZSH_DISABLE_COMPFIX="true"
 # List of plugins
 plugins=(git zsh-syntax-highlighting web-search)
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Load custom aliases
-source $ZSH/oh-my-zsh.sh
-
-# Load aliases
-source ~/.aliases
-
 # Export nvim path
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/opt/nvim"
 
 # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
@@ -41,3 +32,12 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Load custom aliases
+source $ZSH/oh-my-zsh.sh
+
+# Load aliases
+source ~/.aliases

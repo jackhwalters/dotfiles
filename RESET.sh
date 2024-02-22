@@ -24,8 +24,11 @@ then
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     yes | sudo apt-get remove tmux
-    yes | sudo apt remove ripgrep curl jq
+    yes | sudo apt remove ripgrep curl jq build-essential npm python3-venv
 fi
+
+# Remove Conda
+rm -rf $HOME/miniconda3
 
 # Remove Packer
 rm -rf $HOME/.local/share/nvim/site/pack/packer
