@@ -6,7 +6,7 @@ ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
 ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.aliases $HOME/.aliases
-mkdir $HOME/.config && ln -sFf $HOME/dotfiles/nvim/ $HOME/.config/nvim
+mkdir -p $HOME/.config && ln -sFf $HOME/dotfiles/nvim/ $HOME/.config/nvim
 ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
 
 # Install Vundle and install plugins
@@ -30,6 +30,23 @@ mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
+
+# Install Neovim
+if [[ $(uname -s) == 'Darwin'* ]]
+then
+    brew install neovim
+elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
+then
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    chmod u+x nvim.appimage
+    ./nvim.appimage --appimage-extract
+    ./squashfs-root/AppRun --version
+    sudo mv squashfs-root /
+    sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+    rm nvim.appimage
+else
+    echo "Unrecognised OS for installing VS Code configs"
+fi
 
 # Install Packer and related LSP dependencies
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]
@@ -76,7 +93,7 @@ then
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
-    tar -xvzf JetBrainsMono.tar.gz -C JetBrainsMono
+    mkdir JetBrainsMono && tar -xf JetBrainsMono.tar.xz -C JetBrainsMono
     mkdir -p $HOME/.local/share/fonts && cp -vf JetBrainsMono/*.ttf $HOME/.local/share/fonts
     rm -rf JetBrainsMono.zip JetBrainsMono
 else

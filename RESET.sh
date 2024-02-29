@@ -30,6 +30,15 @@ fi
 # Remove Conda
 rm -rf $HOME/miniconda3
 
+# Remove Neovim
+if [[ $(uname -s) == 'Darwin'* ]]
+then
+    brew uninstall neovim
+elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
+then
+    rm -rf/usr/bin/nvim /squashfs-root/
+fi
+
 # Remove Packer
 rm -rf $HOME/.local/share/nvim/site/pack/packer
 rm $HOME/dotfiles/nvim/plugin/packer_compiled.lua
