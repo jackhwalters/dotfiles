@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local dap = require('dap')
 
 lsp_zero.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
@@ -18,13 +19,16 @@ end)
 local lspconfig = require('lspconfig')
 require('mason').setup({
     ensure_installed = {
-        "debugpy"
+        "debugpy",
+        "codelldb",
     }
 })
 require('mason-lspconfig').setup({
     ensure_installed = {
         "pyright",
         "bashls",
+        "clangd",
+        "tsserver",
         "lua_ls"
     },
     handlers = {
@@ -35,8 +39,35 @@ require('mason-lspconfig').setup({
         pyright = function()
             lspconfig.pyright.setup(lsp_zero.nvim_lua_ls())
         end,
+        clangd = function()
+            lspconfig.clangd.setup(lsp_zero.nvim_lua_ls())
+        end,
+        tsserver = function()
+            lspconfig.tsserver.setup(lsp_zero.nvim_lua_ls())
+        end,
     }
 })
+
+dap.configurations.cpp = {
+    {
+        name = "Launch",
+        type = "lldb",
+        request = "launch",
+        program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+        args = {},
+        runInTerminal = true,
+    }
+}
+
+dap.adapters.lldb = {
+    type = 'executable',
+    command = '/usr/local/bin/lldb-vscode',
+    name = 'lldb'
+}
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }

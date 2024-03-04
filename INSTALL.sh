@@ -19,11 +19,12 @@ vim +PluginInstall +qall
 # Install CLI dependencies
 if [[ $(uname -s) == 'Darwin'* ]]
 then
-    brew install tmux ripgrep curl jq gcc
+    brew install tmux ripgrep curl jq gcc llvm
+    ln -s $(brew --prefix)/opt/llvm/bin/lldb-vscode $(brew --prefix)/bin/
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     sudo apt-get install tmux
-    sudo apt install -y ripgrep curl jq build-essential npm python3-venv
+    sudo apt install -y ripgrep curl jq build-essential npm python3-venv llvm
 fi
 
 mkdir -p ~/miniconda3

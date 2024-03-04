@@ -18,6 +18,7 @@ null_ls.setup({
             diagnostics_postprocess = function(diagnostic)
                 diagnostic.code = diagnostic.message_id
             end,
-        })
-    },
+        }),
+        null_ls.builtins.formatting.clang_format,
+    }
 })

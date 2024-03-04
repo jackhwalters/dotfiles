@@ -20,11 +20,12 @@ rm -rf $HOME/.vim/bundle/vundle.vim
 # Remove CLI dependencies
 if [[ $(uname -s) == 'Darwin'* ]]
 then
-    brew uninstall tmux ripgrep curl jq
+    brew uninstall tmux ripgrep curl jq llvm
+    rm $(brew --prefix)/bin/llvm-vscode
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     yes | sudo apt-get remove tmux
-    yes | sudo apt remove ripgrep curl jq build-essential npm python3-venv
+    yes | sudo apt remove ripgrep curl jq build-essential npm python3-venv llvm
 fi
 
 # Remove Conda
