@@ -23,8 +23,12 @@ then
     ln -s $(brew --prefix)/opt/llvm/bin/lldb-vscode $(brew --prefix)/bin/
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
-    sudo apt-get install tmux
-    sudo apt install -y ripgrep curl jq build-essential npm python3-venv llvm
+    sudo apt-get update
+    sudo apt update
+    sudo apt-get install tmux unzip
+    sudo apt install -y ripgrep curl jq build-essential npm python3-venv llvm clang
+    sudo npm install -g n
+    sudo n lts
 fi
 
 mkdir -p ~/miniconda3
@@ -96,7 +100,7 @@ then
     curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
     mkdir JetBrainsMono && tar -xf JetBrainsMono.tar.xz -C JetBrainsMono
     mkdir -p $HOME/.local/share/fonts && cp -vf JetBrainsMono/*.ttf $HOME/.local/share/fonts
-    rm -rf JetBrainsMono.zip JetBrainsMono
+    rm -rf JetBrainsMono.tar.xz JetBrainsMono
 else
     echo "Unrecognised OS for installing VS Code configs"
 fi

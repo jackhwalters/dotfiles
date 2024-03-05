@@ -24,8 +24,12 @@ then
     rm $(brew --prefix)/bin/llvm-vscode
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
-    yes | sudo apt-get remove tmux
+    yes | sudo apt-get remove tmux unzip
     yes | sudo apt remove ripgrep curl jq build-essential npm python3-venv llvm
+    sudo n prune
+    sudo npm uninstall -g n
+    sudo rm -r /usr/local/n
+    sudo rm /usr/local/bin/node 
 fi
 
 # Remove Conda

@@ -21,6 +21,7 @@ require('mason').setup({
     ensure_installed = {
         "debugpy",
         "codelldb",
+        "pylint",
     }
 })
 require('mason-lspconfig').setup({
@@ -29,7 +30,7 @@ require('mason-lspconfig').setup({
         "bashls",
         "clangd",
         "tsserver",
-        "lua_ls"
+        "lua_ls",
     },
     handlers = {
         lsp_zero.default_setup,
