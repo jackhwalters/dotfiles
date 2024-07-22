@@ -67,27 +67,6 @@ then
     git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 fi
 
-# Symlink VS Code configs
-if [[ $(uname -s) == 'Darwin'* ]]
-then
-    mkdir -p $HOME/Library/Application\ Support/Code/User/
-    ln -s $HOME/dotfiles/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
-    mkdir -p $HOME/Library/Application\ Support/Code/User/
-    ln -s $HOME/dotfiles/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
-elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
-then
-    mkdir -p $HOME/.config/Code/User/
-    ln -s $HOME/dotfiles/settings.json $HOME/.config/Code/User/settings.json
-    ln -s $HOME/dotfiles/keybindings.json $HOME/.config/Code/User/keybindings.json
-elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" || "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]]
-then
-    mkdir -p $HOME/AppData/Roaming/Code/User
-    ln -s $HOME/dotfiles/settings.json $HOME/AppData/Roaming/Code/User/settings.json
-    ln -s $HOME/dotfiles/keybindings.json $HOME/AppData/Roaming/Code/User/keybindings.json
-else
-    echo "Unrecognised OS for installing VS Code configs"
-fi
-
 # Install JetBrainsMono font
 if [[ $(uname -s) == 'Darwin'* ]]
 then
