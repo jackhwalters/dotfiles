@@ -50,7 +50,7 @@ then
     sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
     rm nvim.appimage
 else
-    echo "Unrecognised OS for installing VS Code configs"
+    echo "Unrecognised OS for installing Neovim"
 fi
 
 # Install Packer and related LSP dependencies
