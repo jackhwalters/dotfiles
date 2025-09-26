@@ -13,3 +13,4 @@ fi
 export PS1="\[\033[92m\]\u@\h \[\033[96m\]\W\[\033[31m\] (\$(git symbolic-ref --short HEAD 2>/dev/null))\[\033[00m\]\$ "
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
+. "$HOME/.cargo/env"
