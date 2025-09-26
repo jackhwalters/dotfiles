@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-# Make ZSH feault shell
+# Make ZSH deault shell
 chsh -s /bin/zsh
 
 # Symlink RCs
