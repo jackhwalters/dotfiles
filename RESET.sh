@@ -19,5 +19,3 @@ then
     rm -rf/usr/bin/nvim /squashfs-root/
 fi
 
-# Remove Oh My ZSH
-rm -rf .oh-my-zsh/
