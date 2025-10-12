@@ -6,3 +6,4 @@ export PATH="$HOME/.local/bin:$PATH"
 # Source config files
 source ~/.p10k.zsh
 source ~/.aliases
+source ~/powerlevel10k/powerlevel10k.zsh-theme
