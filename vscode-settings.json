@@ -1,0 +1,117 @@
+{
+    "editor.minimap.enabled": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vim.handleKeys": {
+        "<C-p>": false,
+        "<C-s>": false,
+        "<C-f>": false,
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-b>": false
+    },
+    "editor.cursorStyle": "block",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "git.autofetch": true,
+    "git.ignoreLegacyWarning": true,
+    "workbench.startupEditor": "none",
+    "editor.formatOnPaste": true,
+    "workbench.editor.enablePreview": false,
+    "editor.occurrencesHighlight": "off",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.detectIndentation": false,
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "diffEditor.renderSideBySide": false,
+    "editor.colorDecorators": false,
+    "[python]": {
+        "editor.formatOnType": true,
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.zoomLevel": 1,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "extensions.ignoreRecommendations": true,
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/jack/.config/nvim/lua/jack/remap.lua",
+    "editor.cursorBlinking": "solid",
+    "terminal.integrated.inheritEnv": false,
+    "vscode-neovim.compositeKeys": {
+        "jh": {
+            "command": "vscode-neovim.escape",
+        },
+    },
+    "window.titleBarStyle": "custom",
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "editor.experimentalInlineEdit.fontFamily": "",
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', Monaco, 'Courier New', monospace",
+    "editor.fontSize": 13,
+    "settingsSync.keybindingsPerPlatform": false,
+    "terminal.integrated.scrollback": 100000,
+    "debug.console.wordWrap": false,
+    "editor.inlayHints.enabled": "on",
+    "terminal.integrated.fontSize": 13,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "explorer.confirmDragAndDrop": false,
+    "vscode-neovim.logOutputToConsole": true,
+    "MATLAB.installPath": "C:\\Program Files\\MATLAB\\R2024a",
+    "MATLAB.showFeatureNotAvailableError": false,
+    "git.confirmSync": false,
+    "git.ignoreRebaseWarning": true,
+    "editor.rulers": [
+        110
+    ],
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "vscode-neovim.neovimClean": true,
+    "vscode-neovim.ctrlKeysForNormalMode": [
+        "d",
+        "u",
+        "r"
+    ],
+    "vscode-neovim.ctrlKeysForInsertMode": [],
+    "security.allowedUNCHosts": [
+        "projects"
+    ],
+    "lldb.suppressUpdateNotifications": true,
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "debug.inlineValues": "off",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "cmake.automaticReconfigure": false,
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "zenMode.hideLineNumbers": false,
+    "editor.lineNumbers": "relative",
+    "diffEditor.codeLens": true,
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "remote.SSH.experimental.chat": false,
+    "settingsSync.ignoredExtensions": [
+        "github.copilot"
+    ],
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "python.analysis.typeCheckingMode": "basic",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "github.copilot.nextEditSuggestions.enabled": true,
+}
