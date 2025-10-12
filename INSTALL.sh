@@ -9,6 +9,7 @@ ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.aliases $HOME/.aliases
 mkdir -p $HOME/.config && ln -sFf $HOME/dotfiles/nvim/ $HOME/.config/nvim
 ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
+rm -f ~/Library/Application\ Support/Code/User/settings.json && ln -s $HOME/dotfiles/vscode-settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 # Install Neovim and tmux
 if [[ $(uname -s) == 'Darwin'* ]]
@@ -46,18 +47,8 @@ else
 fi
 
 # Install PowerLevel10k
-if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]
-then
-    rm -rf ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git 
-fi
-
-# Install ZSH Syntax Highlighting
-if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]
-then
-    rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-fi
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 
