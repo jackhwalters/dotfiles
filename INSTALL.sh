@@ -12,6 +12,7 @@ ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 rm -f ~/Library/Application\ Support/Code/User/settings.json && ln -s $HOME/dotfiles/vscode-settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 rm -f ~/Library/Application\ Support/Cursor/User/settings.json && ln -s $HOME/dotfiles/cursor-settings.json "$HOME/Library/Application Support/Cursor/User/settings.json"
+rm -f ~/Library/Application\ Support/Cursor/User/keybindings.json && ln -s $HOME/dotfiles/cursor-keybindings.json "$HOME/Library/Application Support/Cursor/User/keybindings.json"
 
 # Install Neovim and tmux
 if [[ $(uname -s) == 'Darwin'* ]]
