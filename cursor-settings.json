@@ -62,5 +62,6 @@
    },
    "editor.smoothScrolling": true,
    "terminal.integrated.smoothScrolling": true,
-   "workbench.list.smoothScrolling": true
+   "workbench.list.smoothScrolling": true,
+   "editor.rulers": [110]
 }
