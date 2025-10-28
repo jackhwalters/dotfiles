@@ -59,5 +59,8 @@
       "**/.venv/**": true,
       "**/venv/**": true,
       "**/.venv": true
-  }
- }
+   },
+   "editor.smoothScrolling": true,
+   "terminal.integrated.smoothScrolling": true,
+   "workbench.list.smoothScrolling": true
+}
