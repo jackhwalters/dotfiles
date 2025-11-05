@@ -57,7 +57,17 @@
     "search.exclude": {
         "**/.venv/**": true,
         "**/venv/**": true,
-        "**/.venv": true
+        "**/.venv": true,
+        "**/node_modules/**": true,
+        "**/__pycache__/**": true
+    },
+    "files.exclude": {
+        "**/.venv": true,
+        "**/venv": true
+    },
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/venv/**": true
     },
     "editor.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
