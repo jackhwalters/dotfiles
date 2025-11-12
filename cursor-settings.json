@@ -73,5 +73,8 @@
     "terminal.integrated.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "editor.rulers": [110],
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.persistentSessionScrollback": 100000
 }
