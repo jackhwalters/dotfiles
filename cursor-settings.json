@@ -40,6 +40,22 @@
             "before": ["K"],
             "commands": ["lineBreakInsert"],
             "silent": true
+        },
+        {
+            "before": ["j"],
+            "after": ["h"]
+        },
+        {
+            "before": ["k"],
+            "after": ["j"]
+        },
+        {
+            "before": ["l"],
+            "after": ["k"]
+        },
+        {
+            "before": [";"],
+            "after": ["l"]
         }
     ],
     "vim.leader": "<space>",
