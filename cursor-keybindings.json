@@ -71,5 +71,21 @@
         "key": "shift+cmd+o",
         "command": "-editor.action.accessibleViewGoToSymbol",
         "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "workbench.action.focusRightGroup"
     }
 ]
