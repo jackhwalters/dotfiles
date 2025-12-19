@@ -1,92 +1,12 @@
-set nocompatible
+" Key remappings for hjkl
+" Normal mode remappings
+nnoremap j h
+nnoremap k j
+nnoremap l k
+nnoremap ; l
 
-" ================ General Config ====================
-
-set number                      "Line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
-
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
-
-" paste
-set noautoindent
-
-" turn relative line numbers on
-:set relativenumber
-:set rnu
-
-" disable swap files
-set noswapfile
-
-" vundle
-filetype off
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'joshdick/onedark.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'preservim/nerdtree'
-Plugin 'chrisbra/Colorizer'
-Plugin 'itchyny/lightline.vim'
-Plugin 'preservim/nerdcommenter'
-Plugin 'pseewald/vim-anyfold'
-
-" End plugins
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-syntax enable
-set ignorecase
-
-" colours
-colorscheme onedark
-
-" NERDTree
-let g:NERDTreeDirArrows=0
-let NERDTreeShowHidden=1
-let g:NERDTreeWinPos = "left"
-let NERDTreeRespectWildIgnore=1
-let g:NERDTreeWinSize=25
-set wildignore+=*.swp,*.DS_Store,
-
-" any-fold
-autocmd Filetype * AnyFoldActivate
-set foldlevel=99
-
-" remappings
-imap JH <esc>
-imap jh <Esc>
-cmap WP w !python3  
-cmap vhelp vert h
-cmap hhelp help
-cmap NT NERDTree
-nnoremap <Tab> :tabn <ENTER>
-nmap <leader><Tab> :tabp <ENTER>
-nnoremap d "_dd"
-vnoremap d "_dd"
-nnoremap <C-e> <C-w>
-
-set number
-set smartindent
-set linebreak
-set tabstop=4
-set shiftwidth=4
-autocmd Filetype javascript setlocal tabstop=4
-autocmd Filetype javascript setlocal shiftwidth=4
-autocmd Filetype html setlocal tabstop=4
-autocmd Filetype html setlocal shiftwidth=4
-set expandtab
-set clipboard=unnamed
-
-autocmd VimEnter * .
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Visual mode remappings
+vnoremap j h
+vnoremap k j
+vnoremap l k
+vnoremap ; l

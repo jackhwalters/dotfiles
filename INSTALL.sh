@@ -4,7 +4,7 @@
 chsh -s /bin/zsh
 
 # Symlink RCs
-# ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
+ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.aliases $HOME/.aliases
 # mkdir -p $HOME/.config && ln -sFf $HOME/dotfiles/nvim/ $HOME/.config/nvim
