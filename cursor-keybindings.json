@@ -20,7 +20,7 @@
     },
     {
         "key": "tab",
-        "command": "selectNextSuggestion",
+        "command": "-selectNextSuggestion",
         "when": "editorTextFocus && suggestWidgetVisible"
     },
     {
@@ -87,5 +87,24 @@
     {
         "key": "ctrl+;",
         "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "toggleVim"
+    },
+    {
+        "key": "tab",
+        "command": "-editor.action.acceptSelectedSuggestion",
+        "when": "suggestWidgetVisible && !inlineSuggestionVisible"
+    },
+    {
+        "key": "tab",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetVisible && !inlineSuggestionVisible"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionVisible && textInputFocus && !inQuickOpen"
     }
 ]
