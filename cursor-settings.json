@@ -28,9 +28,6 @@
     },
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/.vimrc",
-    "extensions.experimental.affinity": {
-        "vscodevim.vim": 1
-    },
     "extensions.ignoreRecommendations": true,
     "workbench.colorTheme": "Default Dark Modern",
     "git.confirmSync": false,
