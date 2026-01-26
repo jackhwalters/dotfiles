@@ -29,7 +29,7 @@
     },
     {
         "key": "shift+cmd+c",
-        "command": "git.checkoutDetached"
+        "command": "git.checkout"
     }
 
     // ============================================================================
