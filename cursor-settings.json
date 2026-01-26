@@ -54,5 +54,8 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.scrollback": 100000,
-    "terminal.integrated.persistentSessionScrollback": 100000
+    "terminal.integrated.persistentSessionScrollback": 100000,
+    "git.suggestSmartCommit": false,
+    "git.followTagsWhenSync": true,
+    "git.pullTags": false
 }

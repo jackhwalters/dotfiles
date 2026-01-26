@@ -14,10 +14,11 @@
         "command": "-workbench.view.scm",
         "when": "workbench.scm.active"
     },
-
-    // ============================================================================
-    // Editor Tab Navigation
-    // ============================================================================
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
     {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditorInGroup"
@@ -26,6 +27,10 @@
         "key": "ctrl+shift+tab",
         "command": "workbench.action.previousEditorInGroup"
     },
+    {
+        "key": "shift+cmd+c",
+        "command": "git.checkoutDetached"
+    }
 
     // ============================================================================
     // Suggestion Widget Navigation
@@ -219,5 +224,5 @@
         "key": "tab",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionVisible && textInputFocus && !inQuickOpen"
-    }
+    },
 ]
