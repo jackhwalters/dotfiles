@@ -9,7 +9,7 @@
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "window.zoomLevel": 0.7,
+    "window.zoomLevel": 0.5,
     "terminal.integrated.stickyScroll.enabled": false,
     "editor.minimap.enabled": false,
     "diffEditor.renderSideBySide": false,
@@ -57,5 +57,6 @@
     "terminal.integrated.persistentSessionScrollback": 100000,
     "git.suggestSmartCommit": false,
     "git.followTagsWhenSync": true,
-    "git.pullTags": false
+    "git.pullTags": false,
+    "window.zoomPerWindow": false
 }
