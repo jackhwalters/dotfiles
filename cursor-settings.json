@@ -58,5 +58,6 @@
     "git.suggestSmartCommit": false,
     "git.followTagsWhenSync": true,
     "git.pullTags": false,
-    "window.zoomPerWindow": false
+    "window.zoomPerWindow": false,
+    "workbench.editor.focusRecentEditorAfterClose": false
 }
