@@ -135,6 +135,20 @@
     },
 
     // ============================================================================
+    // Remove Swap Agent Sidebar Location (cmd+E) - override so it does nothing
+    // ============================================================================
+    {
+        "key": "cmd+e",
+        "command": "-workbench.action.toggleUnifiedSidebar",
+        "when": "cursor.agentIdeUnification.enabled"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.noop",
+        "when": "cursor.agentIdeUnification.enabled"
+    },
+
+    // ============================================================================
     // File Tree Navigation (jkl; remapped from hjkl)
     // ============================================================================
     {
