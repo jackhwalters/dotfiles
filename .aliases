@@ -1,5 +1,6 @@
-alias ll="eza -lh"
-alias lla="eza -lah"
+alias ls="eza"
+alias ll="ls -lh"
+alias lla="ls -lah"
 alias cdls=". cdls"
 alias cdlsa=". cdlsa"
 
