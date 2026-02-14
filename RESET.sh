@@ -13,7 +13,7 @@ rm $HOME/.p10k
 # Remove Neovim
 if [[ $(uname -s) == 'Darwin'* ]]
 then
-    brew uninstall neovim tmux
+    brew uninstall neovim tmux eza
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     rm -rf/usr/bin/nvim /squashfs-root/

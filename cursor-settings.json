@@ -59,6 +59,5 @@
     "git.pullTags": false,
     "window.zoomPerWindow": false,
     "workbench.editor.focusRecentEditorAfterClose": false,
-    "window.zoomLevel": 1,
     "terminal.integrated.copyOnSelection": true
 }

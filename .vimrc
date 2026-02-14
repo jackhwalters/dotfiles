@@ -10,3 +10,7 @@ vnoremap j h
 vnoremap k j
 vnoremap l k
 vnoremap ; l
+
+" show absolute line number for the current line
+set number
+set relativenumber
