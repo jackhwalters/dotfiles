@@ -7,7 +7,7 @@ chsh -s /bin/zsh
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.aliases $HOME/.aliases
-# mkdir -p $HOME/.config && ln -sFf $HOME/dotfiles/nvim/ $HOME/.config/nvim
+mkdir -p $HOME/.config && ln -sFf $HOME/dotfiles/nvim/ $HOME/.config/nvim
 ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 rm -f ~/Library/Application\ Support/Code/User/settings.json && ln -s $HOME/dotfiles/vscode-settings.json $HOME/Library/Application\ Support/Code/User/settings.json
@@ -30,23 +30,6 @@ then
     rm nvim.appimage
 else
     echo "Unrecognised OS for installing Neovim"
-fi
-
-# Install JetBrainsMono font
-if [[ $(uname -s) == 'Darwin'* ]]
-then
-    curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
-    unzip JetBrainsMono.zip -d JetBrainsMono
-    mkdir -p /Library/Fonts && cp -vf JetBrainsMono/*.ttf /Library/Fonts
-    rm -rf JetBrainsMono.zip JetBrainsMono
-elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
-then
-    curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.tar.xz
-    mkdir JetBrainsMono && tar -xf JetBrainsMono.tar.xz -C JetBrainsMono
-    mkdir -p $HOME/.local/share/fonts && cp -vf JetBrainsMono/*.ttf $HOME/.local/share/fonts
-    rm -rf JetBrainsMono.tar.xz JetBrainsMono
-else
-    echo "Unrecognised OS for installing VS Code configs"
 fi
 
 # Install PowerLevel10k
