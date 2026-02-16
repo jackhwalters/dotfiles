@@ -60,6 +60,6 @@
     "window.zoomPerWindow": false,
     "workbench.editor.focusRecentEditorAfterClose": false,
     "terminal.integrated.copyOnSelection": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0.7,
     "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace"
 }
