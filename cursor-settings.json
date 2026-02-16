@@ -59,5 +59,7 @@
     "git.pullTags": false,
     "window.zoomPerWindow": false,
     "workbench.editor.focusRecentEditorAfterClose": false,
-    "terminal.integrated.copyOnSelection": true
+    "terminal.integrated.copyOnSelection": true,
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace"
 }
