@@ -61,5 +61,6 @@
     "workbench.editor.focusRecentEditorAfterClose": false,
     "terminal.integrated.copyOnSelection": true,
     "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.defaultProfile.osx": "zsh"
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "git.detectSubmodules": true
 }
