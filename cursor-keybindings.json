@@ -30,7 +30,23 @@
     {
         "key": "shift+cmd+c",
         "command": "git.checkout"
-    }
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "-workbench.action.terminal.openDetectedLink",
+        "when": "terminalFocus && terminalHasBeenCreated"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "git.viewChanges",
+                "git.viewUntrackedChanges",
+                "git.viewStagedChanges"
+            ]
+        }
+    },
 
     // ============================================================================
     // Suggestion Widget Navigation
@@ -238,5 +254,5 @@
         "key": "tab",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionVisible && textInputFocus && !inQuickOpen"
-    },
+    }
 ]
