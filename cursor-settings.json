@@ -62,8 +62,11 @@
     "terminal.integrated.copyOnSelection": true,
     "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.commandsToSkipShell": [
+        "aichat.newchataction"
+    ],
     "git.detectSubmodules": true,
     "git.ignoreRebaseWarning": true,
     "cursorpyright.analysis.typeCheckingMode": "basic",
-    "window.zoomLevel": 1
+    "security.promptForLocalFileProtocolHandling": false
 }
