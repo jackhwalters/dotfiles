@@ -6,4 +6,4 @@
 4. `v ~/.tmux.conf && <leader> + I`
 
 # Reset
-1. ./RESET.sh
+1. `./RESET.sh`
