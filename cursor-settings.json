@@ -71,5 +71,8 @@
     "security.promptForLocalFileProtocolHandling": false,
     "window.zoomLevel": 1,
     "git.blame.editorDecoration.enabled": true,
-    "gitlens.currentLine.enabled": true
+    "gitlens.currentLine.enabled": true,
+    "cursorpyright.analysis.typeCheckingMode": "basic",
+    "window.autoDetectColorScheme": false,
+    "window.zoomLevel": 1
 }
