@@ -67,7 +67,6 @@
     ],
     "git.detectSubmodules": true,
     "git.ignoreRebaseWarning": true,
-    "cursorpyright.analysis.typeCheckingMode": "basic",
     "security.promptForLocalFileProtocolHandling": false,
     "window.zoomLevel": 1,
     "git.blame.editorDecoration.enabled": true,
