@@ -1,0 +1,70 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-shift-g": "search::SelectPreviousMatch"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-g": "git_panel::Toggle"
+    }
+  },
+  {
+    "context": "!AcpThread > Editor && mode == full",
+    "unbind": {
+      "cmd-shift-e": "pane::RevealInProjectPanel"
+    }
+  },
+  // jkl; tree navigation (hjkl shifted one key right):
+  // j = left/collapse, k = down, l = up, ; = right/expand.
+  // vim:: menu actions are required — plain menu:: is a no-op in panels when vim is on.
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "j": "project_panel::CollapseSelectedEntry",
+      "k": "vim::MenuSelectNext",
+      "l": "vim::MenuSelectPrevious",
+      ";": "project_panel::ExpandSelectedEntry"
+    }
+  },
+  {
+    "context": "OutlinePanel && not_editing",
+    "bindings": {
+      "j": "outline_panel::CollapseSelectedEntry",
+      "k": "vim::MenuSelectNext",
+      "l": "vim::MenuSelectPrevious",
+      ";": "outline_panel::ExpandSelectedEntry"
+    }
+  },
+  // Editor vim cursor motion (hjkl shifted one key right):
+  // j = left, k = down, l = up, ; = right. Applies in normal/visual/operator modes.
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "j": "vim::Left",
+      "k": "vim::Down",
+      "l": "vim::Up",
+      ";": "vim::Right"
+    }
+  }
+]

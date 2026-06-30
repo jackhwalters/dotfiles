@@ -10,9 +10,17 @@ ln -s $HOME/dotfiles/.aliases $HOME/.aliases
 mkdir -p $HOME/.config && ln -sFf $HOME/dotfiles/nvim/ $HOME/.config/nvim
 ln -s $HOME/dotfiles/.p10k.zsh $HOME/.p10k.zsh
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
-rm -f ~/Library/Application\ Support/Code/User/settings.json && ln -s $HOME/dotfiles/vscode-settings.json $HOME/Library/Application\ Support/Code/User/settings.json
-rm -f ~/Library/Application\ Support/Cursor/User/settings.json && ln -s $HOME/dotfiles/cursor-settings.json "$HOME/Library/Application Support/Cursor/User/settings.json"
-rm -f ~/Library/Application\ Support/Cursor/User/keybindings.json && ln -s $HOME/dotfiles/cursor-keybindings.json "$HOME/Library/Application Support/Cursor/User/keybindings.json"
+# VS Code and Cursor share one settings + keybindings file
+mkdir -p "$HOME/Library/Application Support/Code/User" "$HOME/Library/Application Support/Cursor/User"
+rm -f "$HOME/Library/Application Support/Code/User/settings.json" && ln -s $HOME/dotfiles/vs-cursor-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+rm -f "$HOME/Library/Application Support/Code/User/keybindings.json" && ln -s $HOME/dotfiles/vs-cursor-keybindings.json "$HOME/Library/Application Support/Code/User/keybindings.json"
+rm -f "$HOME/Library/Application Support/Cursor/User/settings.json" && ln -s $HOME/dotfiles/vs-cursor-settings.json "$HOME/Library/Application Support/Cursor/User/settings.json"
+rm -f "$HOME/Library/Application Support/Cursor/User/keybindings.json" && ln -s $HOME/dotfiles/vs-cursor-keybindings.json "$HOME/Library/Application Support/Cursor/User/keybindings.json"
+
+# Zed
+mkdir -p "$HOME/.config/zed"
+rm -f "$HOME/.config/zed/settings.json" && ln -s $HOME/dotfiles/zed-settings.json "$HOME/.config/zed/settings.json"
+rm -f "$HOME/.config/zed/keymap.json" && ln -s $HOME/dotfiles/zed-keymap.json "$HOME/.config/zed/keymap.json"
 
 # Install dependencies
 if [[ $(uname -s) == 'Darwin'* ]]

@@ -1,0 +1,79 @@
+{
+    "editor.cursorStyle": "block",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "terminal.integrated.stickyScroll.enabled": false,
+    "editor.minimap.enabled": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.lineNumbers": "relative",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/.vimrc",
+    "extensions.ignoreRecommendations": true,
+    "workbench.colorTheme": "Default Dark Modern",
+    "git.confirmSync": false,
+    "git.replaceTagsWhenPull": true,
+    "search.exclude": {
+        "**/.venv/**": true,
+        "**/venv/**": true,
+        "**/.venv": true,
+        "**/node_modules/**": true,
+        "**/__pycache__/**": true
+    },
+    "files.exclude": {
+        "**/.venv": true,
+        "**/venv": true
+    },
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/venv/**": true
+    },
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.rulers": [110],
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.persistentSessionScrollback": 100000,
+    "git.suggestSmartCommit": false,
+    "git.followTagsWhenSync": true,
+    "git.pullTags": false,
+    "window.zoomPerWindow": false,
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "terminal.integrated.copyOnSelection": true,
+    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.commandsToSkipShell": [
+        "aichat.newchataction"
+    ],
+    "git.detectSubmodules": true,
+    "git.ignoreRebaseWarning": true,
+    "cursorpyright.analysis.typeCheckingMode": "basic",
+    "security.promptForLocalFileProtocolHandling": false,
+    "git.blame.editorDecoration.enabled": true,
+    "gitlens.currentLine.enabled": false,
+    "cursor.editor.layout": {
+        "mode": "editor"
+    },
+    "window.autoDetectColorScheme": false,
+    "window.zoomLevel": 1
+}
