@@ -66,5 +66,15 @@
       "l": "vim::Up",
       ";": "vim::Right"
     }
+  },
+  {
+    "bindings": {
+      "f10": "debugger::StepOver"
+    }
+  },
+  {
+    "unbind": {
+      "f7": "debugger::StepOver"
+    }
   }
 ]
