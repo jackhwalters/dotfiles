@@ -76,5 +76,26 @@
     "unbind": {
       "f7": "debugger::StepOver"
     }
+  },
+  {
+    "context": "Workspace && debugger_running",
+    "bindings": {
+      "f11": "debugger::StepInto"
+    }
+  },
+  {
+    "bindings": {
+      "f12": "debugger::StepOut"
+    }
+  },
+  {
+    "bindings": {
+      "f11": "debugger::StepInto"
+    }
+  },
+  {
+    "unbind": {
+      "ctrl-f11": "debugger::StepInto"
+    }
   }
 ]

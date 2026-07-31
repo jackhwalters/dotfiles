@@ -64,7 +64,7 @@
     "dark": "Zed (Default)",
   },
   "base_keymap": "VSCode",
-  "ui_font_size": 20,
+  "ui_font_size": 19,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
