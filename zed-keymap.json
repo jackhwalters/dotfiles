@@ -24,6 +24,15 @@
       "cmd-shift-g": "search::SelectPreviousMatch"
     }
   },
+  // ctrl-tab / ctrl-shift-tab cycle tabs in order rather than opening the
+  // MRU tab switcher (Zed's default "tab_switcher::Toggle").
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
   {
     "bindings": {
       "cmd-shift-g": "git_panel::Toggle"
@@ -96,6 +105,17 @@
   {
     "unbind": {
       "ctrl-f11": "debugger::StepInto"
+    }
+  },
+  // tab / shift-tab cycle the completion menu. This takes tab away from
+  // Zed's default "editor::ComposeCompletion" — use enter to accept instead.
+  // Snippet tabstops and eager edit predictions are unaffected: their default
+  // contexts already carry "!showing_completions".
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious"
     }
   }
 ]
