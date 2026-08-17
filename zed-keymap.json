@@ -25,5 +25,12 @@
     "bindings": {
       "shift-cmd-g": "git_panel::ToggleFocus"
     }
+  },
+  {
+    "context": "FileFinder > Picker > Editor",
+    "bindings": {
+      "tab": "menu::SelectNext",
+      "shift-tab": "menu::SelectPrevious"
+    }
   }
 ]
