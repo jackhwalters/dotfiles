@@ -26,6 +26,7 @@
   },
   "project_panel": {
     "dock": "left",
+    "starts_open": false,
   },
   "git_panel": {
     "dock": "left",
