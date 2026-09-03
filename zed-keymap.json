@@ -8,22 +8,59 @@
       ]
     }
   },
+  // Git: cmd-shift-g = panel, ctrl-cmd-d = diff, ctrl-cmd-m = branch diff.
+  // Repeated per context because Zed resolves at the deepest matching context,
+  // so a Workspace-level binding alone loses to the Editor/Pane defaults.
   {
     "context": "Workspace",
     "bindings": {
-      "shift-cmd-g": "git_panel::ToggleFocus"
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "ctrl-cmd-d": "git::Diff",
+      "ctrl-cmd-m": "git::DiffBranch"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "ctrl-cmd-d": "git::Diff",
+      "ctrl-cmd-m": "git::DiffBranch"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "ctrl-cmd-d": "git::Diff",
+      "ctrl-cmd-m": "git::DiffBranch"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
-      "shift-cmd-g": "git_panel::ToggleFocus"
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "ctrl-cmd-d": "git::Diff",
+      "ctrl-cmd-m": "git::DiffBranch"
     }
   },
   {
     "context": "MarkdownPreview",
     "bindings": {
-      "shift-cmd-g": "git_panel::ToggleFocus"
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "ctrl-cmd-d": "git::Diff",
+      "ctrl-cmd-m": "git::DiffBranch"
     }
   },
   {

@@ -1,6 +1,6 @@
 # Export paths
 export PATH="$PATH:/opt/nvim"
-export PATH="/usr/local/sbin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Source config files
