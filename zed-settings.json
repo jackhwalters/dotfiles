@@ -46,8 +46,6 @@
     "inline_blame": {
       "enabled": true,
     },
-    // Diff against the default branch (e.g. origin/main) rather than HEAD
-    "diff_base": "default_branch",
   },
   "tabs": {
     "activate_on_close": "left_neighbour",
