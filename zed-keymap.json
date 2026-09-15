@@ -63,6 +63,15 @@
       "ctrl-cmd-m": "git::DiffBranch"
     }
   },
+  // ctrl-tab / ctrl-shift-tab cycle tabs in order rather than opening the
+  // MRU tab switcher (Zed's default "tab_switcher::Toggle").
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
   {
     "context": "FileFinder > Picker > Editor",
     "bindings": {
