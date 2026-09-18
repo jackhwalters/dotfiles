@@ -82,13 +82,12 @@
       "version_control.modified": "#d29922ff",
       "version_control.deleted": "#f85149ff",
       // Zed derives line backgrounds from the gutter colours; pin them to
-      // Ayu's originals (#aad84c / #ef7177 at 15% / 7.5% / 36%, a bit
-      // stronger than the default 12% / 6%)
-      "editor.diff_hunk.added.background": "#aad84c26",
-      "editor.diff_hunk.added.hollow_background": "#aad84c13",
+      // Ayu's originals (#aad84c / #ef7177 at 12% / 6% / 36%)
+      "editor.diff_hunk.added.background": "#aad84c1f",
+      "editor.diff_hunk.added.hollow_background": "#aad84c0f",
       "editor.diff_hunk.added.hollow_border": "#aad84c5c",
-      "editor.diff_hunk.deleted.background": "#ef717726",
-      "editor.diff_hunk.deleted.hollow_background": "#ef717713",
+      "editor.diff_hunk.deleted.background": "#ef71771f",
+      "editor.diff_hunk.deleted.hollow_background": "#ef71770f",
       "editor.diff_hunk.deleted.hollow_border": "#ef71775c",
     },
   },
