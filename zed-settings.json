@@ -59,7 +59,8 @@
   },
   "cursor_shape": "block",
   "buffer_font_fallbacks": ["Menlo", "Monaco", "Courier New", "monospace"],
-  "buffer_font_family": "JetBrains Mono",
+  // NL = no ligatures (keeps != and => as plain characters)
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "wrap_guides": [110],
   "icon_theme": {
     "mode": "system",
@@ -73,5 +74,17 @@
     "mode": "system",
     "light": "Ayu Light",
     "dark": "Ayu Dark",
+  },
+  "theme_overrides": {
+    "Ayu Dark": {
+      // GitHub dark diff palette
+      "editor.diff_hunk.added.background": "#2ea04333",
+      "editor.diff_hunk.deleted.background": "#f8514933",
+      "version_control.word_added": "#2ea04366",
+      "version_control.word_deleted": "#f8514966",
+      "version_control.added": "#3fb950ff",
+      "version_control.modified": "#d29922ff",
+      "version_control.deleted": "#f85149ff",
+    },
   },
 }
