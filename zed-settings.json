@@ -14,17 +14,35 @@
   "cli_default_open_behavior": "existing_window",
   "diff_view_style": "unified",
   "agent": {
+    // The right dock holds only this panel, so alt-cmd-j toggles it.
+    "default_profile": "ask",
+    "dock": "right",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-fable-5-1",
+      "enable_thinking": true,
+      "effort": "high"
+    },
     "button": false,
-    "favorite_models": [],
+    "favorite_models": [
+      {
+        "provider": "anthropic",
+        "model": "claude-fable-5-1",
+        "enable_thinking": true,
+        "effort": "high"
+      }
+    ],
     "model_parameters": [],
-    "threads_sidebar_auto_open": false,
+    "threads_sidebar": {
+      "auto_open": false,
+    },
   },
   "outline_panel": {
     "dock": "left",
   },
   "collaboration_panel": {
     "button": false,
-    "dock": "right",
+    "dock": "left",
   },
   "project_panel": {
     "dock": "left",
@@ -75,22 +93,6 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Ayu Dark",
-  },
-  "theme_overrides": {
-    "Ayu Dark": {
-      // GitHub dark diff gutter colours
-      "version_control.added": "#3fb950ff",
-      "version_control.modified": "#d29922ff",
-      "version_control.deleted": "#f85149ff",
-      // Zed derives line backgrounds from the gutter colours; pin them to
-      // Ayu's originals (#aad84c / #ef7177 at 12% / 6% / 36%)
-      "editor.diff_hunk.added.background": "#aad84c1f",
-      "editor.diff_hunk.added.hollow_background": "#aad84c0f",
-      "editor.diff_hunk.added.hollow_border": "#aad84c5c",
-      "editor.diff_hunk.deleted.background": "#ef71771f",
-      "editor.diff_hunk.deleted.hollow_background": "#ef71770f",
-      "editor.diff_hunk.deleted.hollow_border": "#ef71775c",
-    },
+    "dark": "VSCode Nicer Dark High Contrast",
   },
 }
