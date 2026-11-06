@@ -28,7 +28,7 @@
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/.vimrc",
     "extensions.ignoreRecommendations": true,
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Dark Modern",
     "git.confirmSync": false,
     "git.replaceTagsWhenPull": true,
     "search.exclude": {
