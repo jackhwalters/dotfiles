@@ -96,30 +96,5 @@
   "buffer_font_size": 15,
   // The agent panel's message box and your own messages in it.
   "agent_buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
-    "dark": "GitHub Dark Default",
-  },
-  // GitHub Dark Default sets no selection colour, so Zed's faint default
-  // shows; this is GitHub's accent blue at a visible strength.
-  "theme_overrides": {
-    "GitHub Dark Default": {
-      "players": [
-        {
-          "cursor": "#58a6ffff",
-          "background": "#58a6ffff",
-          "selection": "#388bfd73"
-        }
-      ],
-      "editor.document_highlight.read_background": "#388bfd40",
-      "editor.document_highlight.write_background": "#388bfd59",
-      // Selections in rendered markdown: the MR description and agent replies.
-      "element.selection_background": "#388bfd73",
-      // Diff hunk fills: the theme leaves Zed's 16% default, which is faint.
-      // These are GitHub's own green and red at 19%.
-      "editor.diff_hunk.added.background": "#56d36430",
-      "editor.diff_hunk.deleted.background": "#f8514930"
-    }
-  },
+  "theme": "VSCode Nicer Dark High Contrast",
 }
