@@ -101,7 +101,13 @@
   "theme_overrides": {
     "VSCode Nicer Dark High Contrast": {
       // Gutter bar for changed lines: VS Code Dark Modern's editorGutter.modifiedBackground blue.
-      "version_control.modified": "#0078d4"
+      "version_control.modified": "#0078d4",
+      // Added/deleted line fills: GitHub's green and red at 24% (Zed's default is faint).
+      "editor.diff_hunk.added.background": "#2ea0433d",
+      "editor.diff_hunk.deleted.background": "#f851493d",
+      // Word-level highlights sit on top of the line fills, so they must be stronger.
+      "version_control.word_added": "#2ea0438c",
+      "version_control.word_deleted": "#f85149bf"
     }
   },
 }
