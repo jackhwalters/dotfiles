@@ -85,7 +85,8 @@
   "buffer_font_fallbacks": ["Menlo", "Monaco", "Courier New", "monospace"],
   // NL = no ligatures (keeps != and => as plain characters)
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
-  "wrap_guides": [110],
+  // The theme draws wrap guides in solid white; keep them off.
+  "show_wrap_guides": false,
   "icon_theme": {
     "mode": "light",
     "light": "Zed (Default)",
@@ -97,4 +98,10 @@
   // The agent panel's message box and your own messages in it.
   "agent_buffer_font_size": 15,
   "theme": "VSCode Nicer Dark High Contrast",
+  "theme_overrides": {
+    "VSCode Nicer Dark High Contrast": {
+      // Gutter bar for changed lines: VS Code Dark Modern's editorGutter.modifiedBackground blue.
+      "version_control.modified": "#0078d4"
+    }
+  },
 }
