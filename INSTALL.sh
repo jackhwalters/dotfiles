@@ -22,11 +22,16 @@ mkdir -p "$HOME/.config/zed"
 rm -f "$HOME/.config/zed/settings.json" && ln -s $HOME/dotfiles/zed-settings.json "$HOME/.config/zed/settings.json"
 rm -f "$HOME/.config/zed/keymap.json" && ln -s $HOME/dotfiles/zed-keymap.json "$HOME/.config/zed/keymap.json"
 
+# Paseo: seed the config on a machine that has none (the app owns it after that)
+# Secrets such as LITELLM_API_KEY belong in the untracked ~/.zshrc.local
+mkdir -p "$HOME/.paseo"
+[ -f "$HOME/.paseo/config.json" ] || install -m 600 $HOME/dotfiles/paseo-config.json "$HOME/.paseo/config.json"
+
 # Install dependencies
 if [[ $(uname -s) == 'Darwin'* ]]
 then
     sudo xcodebuild -license accept
-    brew install neovim tmux eza
+    brew install neovim tmux eza direnv
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage

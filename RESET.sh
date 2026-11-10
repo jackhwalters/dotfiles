@@ -8,7 +8,7 @@ rm $HOME/.tmux.conf
 rm $HOME/.aliases
 rm $HOME/.config/nvim
 rm $HOME/.zsh*
-rm $HOME/.p10k
+rm $HOME/.p10k.zsh
 
 # Remove editor config symlinks
 rm -f "$HOME/Library/Application Support/Code/User/settings.json"
@@ -24,6 +24,6 @@ then
     brew uninstall neovim tmux eza
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
-    rm -rf/usr/bin/nvim /squashfs-root/
+    rm -rf /usr/bin/nvim /squashfs-root/
 fi
 
