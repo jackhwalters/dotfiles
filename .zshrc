@@ -15,3 +15,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # tmux never inherits Python env
 [[ -n "$TMUX" ]] && unset VIRTUAL_ENV
+
+# Machine-specific settings and secrets, not tracked
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+zstyle ':completion:*' menu select
