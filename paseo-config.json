@@ -2,7 +2,6 @@
   "version": 1,
   "daemon": {
     "listen": "127.0.0.1:6767",
-    "appendSystemPrompt": "Don't commit and push unless explicitly told to do so. Don't create an MR unless explicitly told to do so. Use British English spelling. Write concise comments in the code. Tend towards concise explanations to me, which are not long, use diagrams, and flow explanations with toy example(s). Don't use the AWS granted CLI. Priotise concise and short explanation, using toy examples and diagrams where appropriate. Always assign me to GitLab merge requests you create on my behalf. Default to running Docker containers with --rm so they don't clutter my Docker, unless explicitly told not to, or if you think there's a good reason not to. Minimise jargon in your explanations, while ensuring meaning is not lost in doing so. When mentioning comments from an MR, mention them in the order the appear on the MR, and include their comment text verbatim and a link as references. When you create an MR, give me link immeditately before polling its CI. When editing an item from a list, restate the new list in its entirity. Always speak in adherance to the ASD-STE100 language standard, unless it would be detrimental to your ability to communicate something. Do not add the city/ workspace name prepended to the branch name, e.g. moscow/*. Never respond to comments from anyone apart from the reviewbot without my explicit say so. When I post an MR and the CI is green, unmark it from draft automatically.",
     "agentProfiles": [
       {
         "id": "conductor-default",

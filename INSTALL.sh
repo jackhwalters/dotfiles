@@ -21,6 +21,7 @@ rm -f "$HOME/Library/Application Support/Cursor/User/keybindings.json" && ln -s 
 mkdir -p "$HOME/.config/zed"
 rm -f "$HOME/.config/zed/settings.json" && ln -s $HOME/dotfiles/zed-settings.json "$HOME/.config/zed/settings.json"
 rm -f "$HOME/.config/zed/keymap.json" && ln -s $HOME/dotfiles/zed-keymap.json "$HOME/.config/zed/keymap.json"
+rm -f "$HOME/.config/zed/AGENTS.md" && ln -s $HOME/dotfiles/coding-agent-prompt.md "$HOME/.config/zed/AGENTS.md"
 
 # Paseo: seed the config on a machine that has none (the app owns it after that)
 # Secrets such as LITELLM_API_KEY belong in the untracked ~/.zshrc.local
@@ -31,7 +32,7 @@ mkdir -p "$HOME/.paseo"
 if [[ $(uname -s) == 'Darwin'* ]]
 then
     sudo xcodebuild -license accept
-    brew install neovim tmux eza direnv
+    brew install neovim tmux eza direnv jq
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]
 then
     curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -43,6 +44,15 @@ then
     rm nvim.appimage
 else
     echo "Unrecognised OS for installing Neovim"
+fi
+
+# Paseo: copy the agent prompt from coding-agent-prompt.md (the master) into its config
+if command -v jq >/dev/null
+then
+    jq --rawfile p $HOME/dotfiles/coding-agent-prompt.md '.daemon.appendSystemPrompt = ($p | rtrimstr("\n"))' "$HOME/.paseo/config.json" > "$HOME/.paseo/config.json.tmp" \
+        && chmod 600 "$HOME/.paseo/config.json.tmp" && mv -f "$HOME/.paseo/config.json.tmp" "$HOME/.paseo/config.json"
+else
+    echo "jq not found: Paseo agent prompt not updated"
 fi
 
 # Install PowerLevel10k

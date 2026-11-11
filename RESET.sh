@@ -17,6 +17,7 @@ rm -f "$HOME/Library/Application Support/Cursor/User/settings.json"
 rm -f "$HOME/Library/Application Support/Cursor/User/keybindings.json"
 rm -f "$HOME/.config/zed/settings.json"
 rm -f "$HOME/.config/zed/keymap.json"
+rm -f "$HOME/.config/zed/AGENTS.md"
 
 # Remove Neovim
 if [[ $(uname -s) == 'Darwin'* ]]

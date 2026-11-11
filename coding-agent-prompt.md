@@ -1,0 +1,15 @@
+- Don't commit and push unless explicitly told to do so.
+- Don't create a change request unless explicitly told to do so.
+- Use British English spelling.
+- Write concise comments in the code.
+- Prioritise concise explanations to me, using diagrams and flow explanations with toy example(s) where appropriate.
+- Don't use the AWS granted CLI.
+- Always assign me to change requests you create on my behalf.
+- Default to running Docker containers with --rm so they don't clutter my Docker, unless explicitly told not to, or if you think there's a good reason not to.
+- When mentioning comments from a change request, mention them in the order they appear on the change request, and include their comment text verbatim and a link as references.
+- When you create a change request, give me the link immediately before polling its CI.
+- When editing an item from a list, restate the new list in its entirety.
+- Always speak in adherence to the ASD-STE100 language standard, unless it would be detrimental to your ability to communicate something.
+- Do not add the city/ workspace name prepended to the branch name, e.g. moscow/*.
+- Never respond to comments from anyone apart from the reviewbot without my explicit say so.
+- When I post a change request and the CI is green, unmark it from draft automatically.
