@@ -4,28 +4,18 @@
     "listen": "127.0.0.1:6767",
     "agentProfiles": [
       {
-        "id": "conductor-default",
-        "name": "Default (Fable 5.1, high)",
+        "id": "paseo-write",
+        "name": "Write (Fable 5.1, high)",
         "provider": "claude",
         "model": "claude-fable-5-1",
-        "thinkingOptionId": "high",
-        "notes": "Imported from Conductor default model."
+        "thinkingOptionId": "high"
       },
       {
-        "id": "conductor-review",
+        "id": "paseo-review",
         "name": "Review (GPT-6-Astra, xhigh)",
         "provider": "codex",
         "model": "gpt-6-astra",
-        "thinkingOptionId": "xhigh",
-        "notes": "Imported from Conductor review model."
-      },
-      {
-        "id": "conductor-codex",
-        "name": "Codex (GPT-6.1-Sol, high)",
-        "provider": "codex",
-        "model": "gpt-6.1-sol",
-        "thinkingOptionId": "high",
-        "notes": "Imported from Conductor Codex default."
+        "thinkingOptionId": "xhigh"
       }
     ],
     "cors": {

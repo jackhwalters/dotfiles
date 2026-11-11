@@ -31,7 +31,7 @@
     "favorite_models": [
       {
         "provider": "anthropic",
-        "model": "claude-fable-5-1",
+        "model": "claude-fable-5-2",
         "enable_thinking": true,
         "effort": "high"
       }
